@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass">
+  <Vendor>
+    <Name>C++ Module Vendor</Name>
+  </Vendor>
+  <DataTypes />
+  <Groups>
+    <Group SortOrder="701">
+      <Name>C++</Name>
+      <DisplayName>C++ Modules</DisplayName>
+    </Group>
+  </Groups>
+  <Modules>
+    <Module GUID="{20416eda-06d4-43b2-810d-44e8d356f013}" Group="C++">
+      <Name>SamplePostmanEchoModule</Name>
+      <CLSID ClassFactory="SamplePostmanEcho">{20416eda-06d4-43b2-810d-44e8d356f013}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>PSO</InitSequence>
+      <Contexts ><Context><Id>1</Id></Context></Contexts>
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+        </Interface><Interface><Type GUID="{03000010-0000-0000-e000-000000000064}">ITcCyclic</Type></Interface><Interface><Type GUID="{b80ed7cd-387c-4076-92f9-c85ad8604de8}">ITcIotHttpResponse</Type></Interface>
+      </Interfaces>
+      <Parameters ><Parameter OnlineParameter="true"><Name>sendHttpPostRequest</Name><BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType><PTCID>#x00000002</PTCID><ContextId>1</ContextId></Parameter><Parameter OnlineParameter="true" ReadOnly="true"><Name>validMessageReceivedCnt</Name><BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType><PTCID>#x00000003</PTCID><ContextId>1</ContextId></Parameter><Parameter OnlineParameter="true" ReadOnly="true"><Name>statusCode</Name><BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType><PTCID>#x00000004</PTCID><ContextId>1</ContextId></Parameter><Parameter ReadOnly="true" OnlineParameter="true"><Name>errorCnt</Name><BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType><PTCID>#x00000005</PTCID><ContextId>1</ContextId></Parameter><Parameter ReadOnly="true" OnlineParameter="true"><Name>content</Name><BaseType GUID="{18071995-0000-0000-0000-0001000000ff}">STRING(255)</BaseType><PTCID>#x00000006</PTCID><ContextId>1</ContextId></Parameter></Parameters>
+      <DataAreas />
+      <InterfacePointers ><InterfacePointer><PTCID>#x00000001</PTCID><Name>HttpClient</Name><Type GUID="{f52bdcd8-faf1-468d-a92d-3b13096aab03}">ITcIotHttpClient</Type><ContextId>1</ContextId></InterfacePointer><InterfacePointer><PTCID>#x00000007</PTCID><Name>CyclicCaller</Name><Type GUID="{0300001e-0000-0000-e000-000000000064}">ITcCyclicCaller</Type><ContextId>1</ContextId></InterfacePointer></InterfacePointers>
+      <DataPointers />
+      <Deployment>
+        <FileEntry TargetPlatform="TwinCAT RT (x86)">
+          <SourceFile>%SOLUTIONDEPLOYMENTPATH%TwinCAT RT (x86)\%CLASSFACTORYNAME%.sys</SourceFile>
+          <DestinationFile>%TC_DRIVERAUTOINSTALLPATH%%CLASSFACTORYNAME%.sys</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT RT (x86)">
+          <SourceFile>%SOLUTIONDEPLOYMENTPATH%TwinCAT RT (x86)\%CLASSFACTORYNAME%.pdb</SourceFile>
+          <DestinationFile>%TC_DRIVERAUTOINSTALLPATH%%CLASSFACTORYNAME%.pdb</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT RT (x64)">
+          <SourceFile>%SOLUTIONDEPLOYMENTPATH%TwinCAT RT (x64)\%CLASSFACTORYNAME%.sys</SourceFile>
+          <DestinationFile>%TC_DRIVERAUTOINSTALLPATH%%CLASSFACTORYNAME%.sys</DestinationFile>
+        </FileEntry>
+        <FileEntry TargetPlatform="TwinCAT RT (x64)">
+          <SourceFile>%SOLUTIONDEPLOYMENTPATH%TwinCAT RT (x64)\%CLASSFACTORYNAME%.pdb</SourceFile>
+          <DestinationFile>%TC_DRIVERAUTOINSTALLPATH%%CLASSFACTORYNAME%.pdb</DestinationFile>
+        </FileEntry>
+      </Deployment>
+    </Module>
+  </Modules>
+</TcModuleClass>
