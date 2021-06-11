@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="FB_TestHTTP_Get_Telegram" Id="{269b85b0-1fd0-454e-9438-ce6be384a491}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TestHTTP_Get_Telegram
 VAR_INPUT
@@ -32,8 +32,8 @@ VAR
 	nValidResCount		: UDINT;
 	nErrCount			: UDINT;
 	fbFormatString		: FB_FormatString;
-	sBotApiKey			: STRING(500):='1106704362:AAExFeda7Jf9CojjI9whLEzPeE4KDlDz1Ng';
-	sChatId				: STRING(500):='1140425958';
+	sBotApiKey			: STRING(500):='1644750049:AAH-censored_9RQkjlZ2IURbZWM';
+	sChatId				: STRING(500):='114042censored';
 	sConMessage			: STRING(500);
 END_VAR]]></Declaration>
     <Implementation>

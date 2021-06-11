@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="FB_TestHTTP_Get_openWeatherMap" Id="{1d5d4648-ab91-4972-b506-6fb53f0b17fe}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_TestHTTP_Get_openWeatherMap
 VAR_INPUT
@@ -36,7 +36,7 @@ END_VAR]]></Declaration>
 CASE nState OF
 0:	
 	IF RisingEdge.Q THEN 
-		IF fbRequest.SendRequest(sUri:='/data/2.5/weather?lat=51.88&lon=8.52&APPID=123456789abcdefghij', fbClient:=fbClient, eRequestType:=ETcIotHttpRequestType.HTTP_Get, 0, 0, 0) THEN				
+		IF fbRequest.SendRequest(sUri:='/data/2.5/weather?lat=51.88&lon=8.47&APPID=9adc7censored57f6873e39d', fbClient:=fbClient, eRequestType:=ETcIotHttpRequestType.HTTP_Get, 0, 0, 0) THEN				
 			nState:= 1;
 			nReqCount:= nReqCount+1;
 			bBusy:= TRUE;
